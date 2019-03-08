@@ -1,0 +1,969 @@
+/* SETUP | SETUP-LAYOUT | STYLE - 2019-03-07 1:32 PM */
+/* SETUP | SETUP-2811 | STYLE - 2019-03-04 7:13 AM */
+// 2.8.1.1
+// 2.8.0.1 A (Latest Commit)
+// GENESIS-SAMPLE 2.8.0
+// SETUP | SETUP-2801 | STYLE - 2019-02-12 4:46 AM
+// SETUP | SETUP-2721 | STYLE - 2018-01-06 12:30 PM
+// GENESIS-SAMPLE 2.7.1
+
+// THEME
+@import 	"themeinfo";
+@import 	"wp/2721_setup/normalize";
+
+// BOURBON
+@import 	"bourbon";
+@import 	"neat";
+@import 	"grid/2721_setup/neat";
+
+// -------------------------------------------------------------------- SELECTORS | 2018-12-14
+@import 	"selector/2721_setup/boxsizing";
+@import 	"selector/2721_setup/clear";
+
+// -------------------------------------------------------------------- VARIABLES | 2019-02-12
+
+// WIDTH
+@import 	"variables/2721_setup/width-grid";
+@import 	"variables/2721_setup/width-layout";
+@import 	"variables/2721_setup/width-range";
+@import 	"variables/2721_setup/width-space";
+@import 	"variables/2721_setup/responsive-range";
+
+// TYPOGRAPHY
+@import 	"variables/2721_setup/fontfamily";
+@import 	"variables/2721_setup/fontsize";
+@import 	"variables/2721_setup/fontweight";
+@import 	"variables/2721_setup/lineheight";
+@import 	"variables/2721_setup/letterspacing";
+@import 	"variables/2811_setup/color";
+
+// -------------------------------------------------------------------- COLOR | 2018-12-14
+@import 	"color/2721_setup/color";
+@import 	"color/2721_setup/bgcolor";
+@import 	"color/2721_setup/tint";
+@import 	"color/2721_setup/fade";
+
+
+@import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
+
+
+// -------------------------------------------------------------------- CONTENT | 2019-02-11
+@import 	"content/2721_setup/link";
+@import 	"content/2721_setup/body";
+@import 	"content/2721_setup/headline";
+@import 	"content/2721_setup/paragraph";
+@import 	"content/2721_setup/list";
+@import 	"content/2811_setup/title";
+@import 	"content/2811_setup/align";
+@import 	"content/2811_setup/button";
+@import 	"content/2721_setup/block";
+
+// -------------------------------------------------------------------- TYPE | 2018-12-14
+@import 	"type/2721_setup/family";
+@import 	"type/2721_setup/size";
+@import 	"type/2721_setup/weight";
+@import 	"type/2721_setup/height";
+
+// -------------------------------------------------------------------- SPACING | 2018-12-14
+@import 	"spacing/2721_setup/space";
+@import 	"spacing/2721_setup/space-responsive";
+@import 	"spacing/2721_setup/spacein";
+@import 	"spacing/2721_setup/spacein-responsive";
+
+// -------------------------------------------------------------------- FORM | 2018-12-14
+@import 	"form/2721_setup/button";
+
+
+@import 	"genesis/genesis-sample-271/objects";						// GENESIS-SAMPLE 2.7.1
+@import 	"genesis/genesis-sample-271/gallery";						// GENESIS-SAMPLE 2.7.1
+@import 	"genesis/genesis-sample-271/forms";							// GENESIS-SAMPLE 2.7.1
+@import 	"genesis/genesis-sample-271/tables";						// GENESIS-SAMPLE 2.7.1
+@import 	"genesis/genesis-sample-271/screenreader";					// GENESIS-SAMPLE 2.7.1
+
+
+// -------------------------------------------------------------------- GRID | 2019-01-01
+@import 	"grid/2721_setup/column_grid";
+@import 	"grid/2721_setup/grid_grid";
+@import 	"grid/2721_setup/column-responsive_grid";
+@import 	"grid/2721_setup/grid-responsive_grid";
+@import 	"grid/2721_setup/gap-responsive_grid";
+
+/* Structure and Layout
+---------------------------------------------------------------------------- */
+
+/* Site Container
+--------------------------------------------- */
+
+.site-container {
+	animation: fadein 1s;
+	word-wrap: break-word;
+}
+
+@keyframes fadein {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+/* Site Inner
+--------------------------------------------- */
+
+.site-inner {
+	//clear: both;
+	//margin: 0 auto;
+	//padding: 60px 30px 0;
+}
+
+
+/* Common Classes
+---------------------------------------------------------------------------- */
+
+/* Avatar
+--------------------------------------------- */
+
+.avatar {
+	//border-radius: 50%;
+	//float: left;
+}
+
+.author-box .avatar,
+.alignleft .avatar {
+	//margin-right: 20px;
+}
+
+.alignright .avatar {
+	//margin-left: 20px;
+}
+
+.comment .avatar {
+	//margin: 0 15px 20px 0;
+}
+
+/* Genesis
+--------------------------------------------- */
+
+.after-entry,
+.archive-description,
+.author-box {
+	margin-bottom: 40px;
+}
+
+.after-entry {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	padding: 20px 30px;
+}
+
+.after-entry .widget:last-of-type {
+	margin-bottom: 0;
+}
+
+.breadcrumb {
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+/* Search Form
+--------------------------------------------- */
+
+.search-form {
+	overflow: hidden;
+}
+
+.entry-content .search-form {
+	margin-bottom: 40px;
+	width: 50%;
+}
+
+.post-password-form input[type="submit"],
+.search-form input[type="submit"] {
+	margin-top: 10px;
+}
+
+.widget_search input[type="submit"] {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Titles
+--------------------------------------------- */
+
+.archive-description .entry-title,
+.archive-title,
+.author-box-title {
+	//font-size: 20px;
+	//font-weight: 600;
+	//margin-bottom: 10px;
+}
+
+.entry-title {
+	//font-size: 30px;
+	//margin-bottom: 10px;
+}
+
+.entry-title a,
+.sidebar .widget-title a {
+	//color: #333;
+	//text-decoration: none;
+}
+
+.entry-title a:focus,
+.entry-title a:hover {
+	//color: #0073e5;
+}
+
+.widget-title {
+	//font-size: 18px;
+	//font-weight: 600;
+	//margin-bottom: 20px;
+}
+
+/* WordPress
+--------------------------------------------- */
+/*
+a.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+a.alignnone {
+	display: inline-block;
+}
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 100%;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 15px;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+	margin: 0 20px 20px 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+	margin: 0 0 20px 20px;
+}
+
+.gallery-caption,
+.wp-caption-text {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0;
+	text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+	margin-bottom: 0;
+}
+
+.entry-content .wp-audio-shortcode,
+.entry-content .wp-playlist,
+.entry-content .wp-video {
+	margin: 0 0 30px;
+}
+*/
+/* Widgets
+---------------------------------------------------------------------------- */
+
+.widget {
+	margin-bottom: 40px;
+}
+
+.widget p:last-child,
+.widget ul > li:last-of-type {
+	margin-bottom: 0;
+}
+
+.widget ul > li {
+	margin-bottom: 10px;
+}
+
+.widget ul > li:last-of-type {
+	padding-bottom: 0;
+}
+
+.widget ol > li {
+	list-style-position: inside;
+	list-style-type: decimal;
+	padding-left: 20px;
+	text-indent: -20px;
+}
+
+.widget li li {
+	border: 0;
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+.widget_calendar table {
+	width: 100%;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+}
+
+/* Featured Content
+--------------------------------------------- */
+
+.featured-content .entry {
+	//border-bottom: 1px solid #eee;
+	//margin-bottom: 20px;
+}
+
+.featured-content .entry:last-of-type {
+	//border-bottom: none;
+	//margin-bottom: 0;
+}
+
+.featured-content .entry-title {
+	//font-size: 16px;
+	//margin-bottom: 5px;
+	//margin-top: 10px;
+}
+
+
+/* Plugins
+---------------------------------------------------------------------------- */
+
+/* Genesis eNews Extended
+--------------------------------------------- */
+
+.after-entry .enews {
+	text-align: center;
+	padding: 10px;
+}
+
+.sidebar .enews {
+	background-color: #f5f5f5;
+	padding: 30px;
+}
+
+.enews-widget input {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.after-entry .enews-widget input {
+	text-align: center;
+}
+
+.enews-widget input[type="submit"] {
+	margin: 0;
+	width: 100%;
+}
+
+.enews form + p {
+	margin-top: 20px;
+}
+
+/* Genesis Simple FAQ
+--------------------------------------------- */
+
+.gs-faq__question {
+	background: transparent;
+	border-bottom: 1px solid #eee;
+	color: #333;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.gs-faq__question:focus,
+.gs-faq__question:hover {
+	background: transparent;
+	color: #0073e5;
+}
+
+.gs-faq__question::after {
+	content: "\f132";
+	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	float: right;
+}
+
+.gs-faq__question.gs-faq--expanded::after {
+	content: "\f460";
+}
+
+
+/* Skip Links
+---------------------------------------------------------------------------- */
+
+.genesis-skip-link {
+	margin: 0;
+}
+
+.genesis-skip-link .skip-link-hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.genesis-skip-link li {
+	height: 0;
+	list-style: none;
+	width: 0;
+}
+
+/* Display outline on focus */
+:focus {
+	color: #333;
+	outline: #ccc solid 1px;
+}
+
+
+/* Site Header
+---------------------------------------------------------------------------- */
+
+.site-header {
+	//background-color: #fff;
+	//box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	//padding: 0 30px;
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+	//float: left;
+	//padding-bottom: 25px;
+	//padding-top: 25px;
+}
+
+.wp-custom-logo .title-area {
+	//max-width: 350px;
+	//padding-bottom: 5px;
+	//padding-top: 5px;
+	//width: 100%;
+}
+
+.wp-custom-logo .title-area img {
+	//width: auto;
+}
+
+.site-title {
+	//font-size: 20px;
+	//font-weight: 600;
+	//line-height: 1;
+	//margin-bottom: 0;
+}
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+	//color: #333;
+	//text-decoration: none;
+}
+
+.site-description,
+.wp-custom-logo .site-title {
+	//border: 0;
+	//clip: rect(0, 0, 0, 0);
+	//height: 1px;
+	//overflow: hidden;
+	//position: absolute !important;
+	//width: 1px;
+	//word-wrap: normal !important;
+}
+
+
+/* Site Navigation
+---------------------------------------------------------------------------- */
+
+.genesis-nav-menu {
+	//clear: both;
+	//line-height: 1;
+	//width: 100%;
+}
+
+.genesis-nav-menu .menu-item {
+	//display: block;
+	//float: none;
+	//position: relative;
+}
+
+.genesis-nav-menu a {
+	//color: #333;
+	//display: block;
+	//font-size: 15px;
+	//font-weight: 400;
+	//outline-offset: -1px;
+	//padding-bottom: 12px;
+	//padding-top: 12px;
+	//text-decoration: none;
+}
+
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	//color: #0073e5;
+	//text-decoration: none;
+}
+
+.genesis-nav-menu .sub-menu,
+.genesis-nav-menu .sub-menu a {
+	//width: 100%;
+}
+
+.genesis-nav-menu .sub-menu {
+	//clear: both;
+	//display: none;
+	//left: -9999px;
+	//margin: 0;
+	//opacity: 1;
+	//padding-left: 15px;
+	//position: static;
+	//z-index: 99;
+}
+
+.genesis-nav-menu .sub-menu a {
+	//background-color: #fff;
+	//font-size: 14px;
+	//position: relative;
+	//word-wrap: break-word;
+}
+
+.genesis-nav-menu .menu-item:focus,
+.genesis-nav-menu .menu-item:hover {
+	//position: relative;
+}
+
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+	//display: block;
+	//left: auto;
+	//opacity: 1;
+}
+
+/* Responsive Menu
+--------------------------------------------- */
+
+.menu .menu-item:focus {
+	//position: static;
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+	//left: auto;
+	//opacity: 1;
+}
+
+.genesis-responsive-menu {
+	//display: none;
+	//position: relative;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu {
+	//display: none;
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+	//background-color: transparent;
+	//border-width: 0;
+	//color: #333;
+	//display: block;
+	//margin: 0 auto;
+	//overflow: hidden;
+	//text-align: center;
+	//visibility: visible;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+	//background-color: transparent;
+	//border-width: 0;
+	//color: #0073e5;
+}
+
+.menu-toggle {
+	//float: right;
+	//line-height: 20px;
+	//margin-bottom: 10px;
+	//margin-top: 10px;
+	//padding: 15px 0;
+	//position: relative;
+	//z-index: 1000;
+}
+
+.menu-toggle.activated::before {
+	//content: "\f335";
+}
+
+.site-header .menu-toggle::before {
+	//float: left;
+	//margin-right: 5px;
+	//position: relative;
+	//text-rendering: auto;
+	//top: 1px;
+}
+
+.sub-menu-toggle {
+	//float: right;
+	//padding: 9px 10px;
+	//position: absolute;
+	//right: 0;
+	//top: 0;
+	//z-index: 100;
+}
+
+.sub-menu .sub-menu-toggle {
+	//padding: 12px 10px;
+}
+
+.sub-menu-toggle::before {
+	//display: inline-block;
+	//text-rendering: auto;
+	//transform: rotate(0);
+	//transition: transform 0.25s ease-in-out;
+}
+
+.sub-menu-toggle.activated::before {
+	//transform: rotate(180deg);
+}
+
+/* Header Menu
+--------------------------------------------- */
+
+.nav-primary {
+	//clear: left;
+	//padding-bottom: 15px;
+	//padding-top: 15px;
+	//width: 100%;
+}
+
+/* Footer Menu
+--------------------------------------------- */
+
+.nav-secondary {
+	//margin-top: 10px;
+}
+
+.nav-secondary .genesis-nav-menu {
+	//line-height: 1.5;
+}
+
+.nav-secondary .menu-item {
+	//display: inline-block;
+}
+
+.nav-secondary a {
+	//margin-left: 10px;
+	//margin-right: 10px;
+	//padding: 0;
+}
+
+
+/* Content Area
+---------------------------------------------------------------------------- */
+
+/* Entry Content
+--------------------------------------------- */
+
+.entry {
+	//margin-bottom: 40px;
+}
+
+.entry-content ol,
+.entry-content ul {
+	//margin-bottom: 30px;
+	//padding-left: 40px;
+}
+
+.entry-content ol > li {
+	//list-style-type: decimal;
+}
+
+.entry-content ul > li {
+	//list-style-type: disc;
+}
+
+.entry-content ol ul > li,
+.entry-content ul ul > li {
+	//list-style-type: circle;
+}
+
+.entry-content ol ol,
+.entry-content ul ul {
+	//margin-bottom: 0;
+}
+
+.entry-content code {
+	background-color: #f5f5f5;
+}
+
+.content .sticky {
+	background-color: #f5f5f5;
+	padding: 30px;
+}
+
+/* Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	//font-size: 16px;
+	//margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+	//margin-bottom: 20px;
+}
+
+.entry-footer .entry-meta {
+	//border-top: 1px solid #eee;
+	//padding-top: 20px;
+}
+
+.entry-categories,
+.entry-tags {
+	//display: block;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+/* Pagination
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	margin: 60px 0;
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination li {
+	display: inline;
+}
+
+.archive-pagination li a {
+	background-color: #f5f5f5;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 4px;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+
+.archive-pagination li a:focus,
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Entry Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	margin-bottom: 40px;
+}
+
+.comment-list li {
+	padding: 40px 0 0 30px;
+}
+
+.comment-list .depth-1 {
+	padding-left: 0;
+}
+
+.comment-header {
+	margin-bottom: 30px;
+}
+
+.comment-content {
+	clear: both;
+}
+
+.comment-content ul > li {
+	list-style-type: disc;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.comment-header p {
+	margin-bottom: 0;
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+.comment-form-cookies-consent label {
+	display: inline;
+	padding-left: 10px;
+}
+
+/* Sidebar
+---------------------------------------------------------------------------- */
+
+.sidebar {
+	//font-size: 16px;
+	//line-height: 1.5;
+}
+
+.sidebar .widget {
+	//margin-bottom: 40px;
+}
+
+.sidebar p {
+	//margin-bottom: 20px;
+}
+
+/* Footer Widgets
+---------------------------------------------------------------------------- */
+
+.footer-widgets {
+	border-top: 1px solid #eee;
+	background-color: #fff;
+	clear: both;
+	padding: 60px 0;
+}
+
+.footer-widgets .wrap {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer-widget-area {
+	margin-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.footer-widget-area:last-child,
+.footer-widgets .widget:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Site Footer
+---------------------------------------------------------------------------- */
+
+.site-footer {
+	//background-color: #fff;
+	//border-top: 1px solid #eee;
+	//font-size: 15px;
+	//line-height: 1.5;
+	//padding: 30px;
+	//text-align: center;
+}
+
+.site-footer p {
+	//margin-bottom: 0;
+}
+
+// -------------------------------------------------------------------- HEADER | 2018-12-14
+@import 	"header/2721_setup/header-logomenuv_grid";
+
+// -------------------------------------------------------------------- SECTION | 2019-02-08
+//@import 	"section/2721_setup/section-header_grid";
+@import 	"section/2811_setup/section-fullscreen";
+
+// -------------------------------------------------------------------- INNER | 2018-12-14
+@import 	"inner/2721_setup/inner_grid";
+
+// -------------------------------------------------------------------- LAYOUT | 2018-12-14
+//@import 	"layout/2721_setup/full_grid";
+@import 	"layout/2721_setup/cs_grid";
+@import 	"layout/2721_setup/sc_grid";
+
+// -------------------------------------------------------------------- FOOTER | 2018-12-14
+@import 	"footer/2721_setup/footer_grid";
+
+// -------------------------------------------------------------------- CREDIT | 2018-12-14
+@import 	"credit/2721_setup/credit-swp_grid";
+
+// -------------------------------------------------------------------- LOOP | 2019-03-04
+@import 	"loop/2811_setup/entry";
+@import 	"loop/2801_setup/entrytitle";
+@import 	"loop/2801_setup/entrymeta";
+@import 	"loop/2801_setup/entryimage";
+@import 	"loop/2801_setup/authorbox";
+@import 	"loop/2801_setup/avatar";
+@import 	"loop/2801_setup/comments";
+
+// -------------------------------------------------------------------- GUI | 2018-12-14
+@import 	"gui/2721_setup/flex";
+@import 	"gui/2721_setup/outerinner_grid";
+@import 	"gui/2721_setup/section-width_grid";
+@import 	"gui/2721_setup/section_grid";
+
+
+@import 	"genesis/genesis-sample-271/media-queries";		// GENESIS-SAMPLE 2.7.1
+@import 	"genesis/genesis-sample-271/print-styles";		// GENESIS-SAMPLE 2.7.1
+
+
+// -------------------------------------------------------------------- GUTENBERG | 2019-02-12
+@import 	"gutenberg/2721_setup/typography";
+@import 	"gutenberg/2721_setup/columns";
+@import 	"gutenberg/2721_setup/images";
+@import 	"gutenberg/2721_setup/blockquotes";
+@import 	"gutenberg/2811_setup/buttons";
+@import 	"gutenberg/2811_setup/uncategorized";
+@import 	"gutenberg/2811_setup/styleeditor";
+
+// -------------------------------------------------------------------- GUIDE | 2019-03-04
+@import 	"guide/2811_setup/label";
